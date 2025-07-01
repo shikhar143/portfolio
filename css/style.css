@@ -132,3 +132,5 @@ body.dark-mode footer {
 #darkModeBtn i {
   font-size: 1.2rem;
 }
+
+#darkModeBtn:hover { background: rgba(255,255,255,0.2); }
