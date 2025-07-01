@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('../images/cover.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+.card-title {
+  font-weight: 600;
+}
+
+#about, #projects, #resume, #contact {
+  scroll-margin-top: 70px;
+}
+
+.hero h1, .hero p, .hero a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.6s; }
+.hero a { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dee2e6;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+#skills .card {
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+#skills i {
+  display: block;
+}
+
+/* #about {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+#projects {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f3f5 100%);
+} */
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode section {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .btn {
+  color: #fff;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+#darkModeBtn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#darkModeBtn i {
+  font-size: 1.2rem;
+}
