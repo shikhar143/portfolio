@@ -134,3 +134,21 @@ body.dark-mode footer {
 }
 
 #darkModeBtn:hover { background: rgba(255,255,255,0.2); }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.navbar.scrolled { background-color: #222 !important; }
